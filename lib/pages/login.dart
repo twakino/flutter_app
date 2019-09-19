@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/first.dart';
+import 'package:flutter_app/pages/home.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -68,9 +69,17 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
+  final Widget svgLogo = new SvgPicture.asset(
+                          'images/logo_w.svg',
+                          color: Colors.white,
+                          semanticsLabel: 'Acme Logo');
   Widget _buildBar(BuildContext context) {
     return new AppBar(
-      title: new Text("Simple Login Example"),
+      title: new SizedBox(
+            width: 120.0,
+            height: 100.0,
+            child: svgLogo
+        ),
       centerTitle: true,
     );
   }
@@ -83,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
             child: new TextField(
               controller: _emailFilter,
               decoration: new InputDecoration(
-                labelText: 'Email'
+                labelText: 'TEL'
               ),
             ),
           ),
@@ -111,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FirstRoute()),
+                  MaterialPageRoute(builder: (context) => HomeRoute()),
                 );
               },
             ),

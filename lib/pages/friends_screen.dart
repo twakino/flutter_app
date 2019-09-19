@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import '../models/chat_model.dart';
+import '../models/friends_model.dart';
 
-class MeetingScreen extends StatefulWidget {
+class FriendsScreen extends StatefulWidget {
   @override
-  MeetingScreenState createState() {
-    return new MeetingScreenState();
+  FrendsScreenState createState() {
+    return new FrendsScreenState();
   }
 }
 
-class MeetingScreenState extends State<MeetingScreen> {
+class FrendsScreenState extends State<FriendsScreen> {
   @override
   Widget build(BuildContext context) {
     return new ListView.builder(
